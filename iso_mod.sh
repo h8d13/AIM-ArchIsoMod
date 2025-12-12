@@ -84,7 +84,7 @@ if [ -f "$PROFILE_LIST" ]; then
 
     if [ -n "$packages" ]; then
         # Create local repo directory in airootfs
-        REPO_DIR="$PROFILE_DIR/airootfs/root/vase_packages"
+        REPO_DIR="$PROFILE_DIR/airootfs/root/local_packages"
         mkdir -p "$REPO_DIR"
 
         echo "Downloading packages with dependencies: $packages"
