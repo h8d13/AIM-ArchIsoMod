@@ -2,6 +2,8 @@
 
 ISO builder for creating custom Arch Linux installation media with pre-cached packages as a **priority source.**
 
+> The advantage here is that if you build frequently, you can achieve 30-100MiB/s without using mirrors as much at the cost of the ISO being larger itself.
+
 ## Required Packages
 > Assumes base-devel
 
