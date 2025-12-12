@@ -2,7 +2,7 @@
 #set -e
 
 SCRIPT_DIR="$(dirname "$0")"
-. "$SCRIPT_DIR/geneneral.conf"
+. "$SCRIPT_DIR/general.conf"
 PROFILE_LIST="$SCRIPT_DIR/iso_profiles/$iso_profile.conf"
 
 PROFILE_DIR="$SCRIPT_DIR/archiso_profile"
