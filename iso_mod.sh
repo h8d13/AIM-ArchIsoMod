@@ -120,7 +120,7 @@ if [ -f "$PROFILE_LIST" ]; then
             # Create local repository database (using explicit file list)
             echo "Creating repository database..."
             if [ -n "$(ls -A "$REPO_DIR"/*.pkg.tar.zst 2>/dev/null)" ]; then
-                repo-add "$REPO_DIR/vase_repo.db.tar.gz" "$REPO_DIR"/*.pkg.tar.zst >/dev/null 2>&1
+                repo-add "$REPO_DIR/local_repo.db.tar.gz" "$REPO_DIR"/*.pkg.tar.zst >/dev/null 2>&1
             else
                 echo "No packages found to add to repository"
             fi
@@ -135,7 +135,7 @@ if [ -f "$PROFILE_LIST" ]; then
             # Backup original pacman.conf to live ISO for fallback
             cp "$PROFILE_DIR/pacman.conf" "$PROFILE_DIR/airootfs/etc/pacman.conf.backup"
 
-            # Insert vase_repo BEFORE [core] so it has priority on other sources !
+            # Insert local_repo BEFORE [core] so it has priority on other sources !
             awk '
                 /^\[core\]/ && !inserted {
                     print "# Local repository for pre-cached packages"
@@ -175,7 +175,7 @@ echo "Silent mode: $silent_mode"
 mkdir -p "$WORK_DIR"
 
 ISO_LABEL="$NAME_$(date +%Y%m)"
-# Limit to configured cores from VM settings using taskset (CPUs 0 through cores-1)
+# Limit to configured using taskset (CPUs 0 through cores-1)
 # Again named cores but its threads
 if [ "$silent_mode" = "1" ]; then
     taskset -c 0-$((cores-1)) mkarchiso -v -w "$WORK_DIR" -o "$OUTPUT_DIR" -L "$ISO_LABEL" "$PROFILE_DIR" >/dev/null 2>&1
