@@ -17,7 +17,7 @@ build_date=$(date '+%Y.%m.%d')
 
 # Check for system updates
 command -v checkupdates >/dev/null 2>&1 && [ -n "$(checkupdates 2>/dev/null)" ] && \
-    echo "System has pending updates (sudo pacman -Syu recommended)"
+    echo "System has pending updates." && exit 1
 
 # Cleanup function for trap
 cleanup() {

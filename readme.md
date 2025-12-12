@@ -16,7 +16,7 @@ sudo pacman -S archiso pacman-contrib
 
 ## Configuration
 
-Edit `geneneral.conf` and the `iso_mod.sh` to customize your ISO:
+Edit `general.conf` and the `iso_mod.sh` to customize your ISO:
 
 ## Usage
 
@@ -26,3 +26,8 @@ sudo ./iso_mod.sh
 
 # Output ISO will be in ./a/ directory
 ```
+
+### Links
+
+    - https://www.gnu.org/software/xorriso/
+    - https://wiki.archlinux.org/title/Archiso
