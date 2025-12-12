@@ -29,5 +29,5 @@ sudo ./iso_mod.sh
 
 ### Links
 
-    - https://www.gnu.org/software/xorriso/
-    - https://wiki.archlinux.org/title/Archiso
+- https://www.gnu.org/software/xorriso/
+- https://wiki.archlinux.org/title/Archiso
