@@ -16,7 +16,7 @@ sudo pacman -S archiso pacman-contrib
 
 ## Configuration
 
-Edit `general.conf`, `iso_profiles/something_profile.conf` the `iso_mod.sh` to customize your ISO:
+Edit `general.conf`, `iso_profiles/something_profile.conf` and then `iso_mod.sh` 
 
 ## Usage
 
